@@ -30,7 +30,6 @@ fun TicTacToeGameScreen() {
             }
         )
         Spacer(modifier = Modifier.height(50.dp))
-
         winningPlayer?.let {
             Text(
                 text = "Player ${it.symbol} has won!",

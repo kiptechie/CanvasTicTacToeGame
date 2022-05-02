@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.PathMeasure
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.kiptechie.canvastictactoegame.models.Player
 import kotlinx.coroutines.CoroutineScope
@@ -44,6 +45,7 @@ fun TicTacToeCanvas(
     Canvas(modifier = Modifier
         .size(300.dp)
         .padding(10.dp)
+        .testTag("tic_tac_toe_canvas")
         .pointerInput(true) {
             detectTapGestures { offset ->
                 if (!isGameRunning) {
